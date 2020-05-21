@@ -1,0 +1,2 @@
+export const PHRASE_ADDED = 'PHRASE_ADDED';
+export const PHRASE_REMOVED = 'PHRASE_REMOVED';
