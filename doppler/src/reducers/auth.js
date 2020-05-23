@@ -134,3 +134,4 @@ export const getAuthExpiration = state => state.decoded ? state.decoded.exp : nu
 export const getAuthUsername = state => state.decoded ? state.decoded.username : null;
 export const getIsRefreshingToken = state => state.isRefreshing;
 export const getRefreshingError = state => state.refreshingError;
+

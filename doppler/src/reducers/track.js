@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import omit from 'lodash/omit'
 import * as types from '../types/track';
 
 /*
@@ -22,14 +22,20 @@ const track = (state = {}, action) => {
         }
 
         case types.TRACK_CHANGED: {
+            // todo action.type para cambios espcificos
+            // para catalogar cambios entre versiones
             return {
                 ...state,
                 [action.payload.id]: {
                     ...state[action.payload.id],
                     ...action.payload
                 }
-            }
-        }           
+            };
+        }
+
+        case types.TRACK_DELETED: {
+            return omit(state, [action.payload.id]);
+        }
         
     
         default:
@@ -41,8 +47,8 @@ export default track;
 
 export const getTrack = (state, id) => state[id];
 export const getLetra = state => state.letra;
-export const getSongId = state => state.songid;
-export const getSongName = state => state.name;
-export const getSongKey = state => state.Key;
-export const getSongPrivacy = state => state.Privacy;
-export const getSongPrivacy = state => state.Privacy;
+export const getTrackId = state => state.Trackid;
+export const getTrackName = state => state.name;
+export const getTrackKey = state => state.Key;
+export const getTrackpPrivate = state => state.private;
+export const getTrackDateModified = state => state.date_modified;
