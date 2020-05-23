@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import * as types from '../types/track';
 
 /*
  songId: id,
@@ -13,25 +14,22 @@ import { v4 as uuidv4 } from 'uuid';
 
 const track = (state = {}, action) => {
     switch (action.type) {
-        case 'TRACK_CREATED': {
-            return action.payload;
-
-        }
-
-        case 'TRACK_NAME_CHANGED': {
+        case types.TRACK_CREATED: {
             return {
                 ...state,
-                [action.payload.]
-            }
-        }
-
-        case 'SAVE_LETRA': {
-            return {
-                ...state,
-                'letra': action.payload.letra
+                [action.payload.id]: action.payload
             };
         }
-            
+
+        case types.TRACK_CHANGED: {
+            return {
+                ...state,
+                [action.payload.id]: {
+                    ...state[action.payload.id],
+                    ...action.payload
+                }
+            }
+        }           
         
     
         default:
@@ -41,7 +39,10 @@ const track = (state = {}, action) => {
 
 export default track;
 
-export const getTrack = state => state;
+export const getTrack = (state, id) => state[id];
 export const getLetra = state => state.letra;
 export const getSongId = state => state.songid;
 export const getSongName = state => state.name;
+export const getSongKey = state => state.Key;
+export const getSongPrivacy = state => state.Privacy;
+export const getSongPrivacy = state => state.Privacy;
