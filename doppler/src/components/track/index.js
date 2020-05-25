@@ -2,7 +2,12 @@ import React, { Fragment } from 'react';
 
 import './styles.css';
 
-const Track = () => (
+const Track = ({
+    songName,
+    key,
+    version,
+    lastModifyDate
+}) => (
     <Fragment>
         <div className="track-container">
             <div>   </div>

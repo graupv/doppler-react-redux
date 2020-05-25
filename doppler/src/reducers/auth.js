@@ -21,9 +21,12 @@ const token = (state = null, action) => {
     case types.AUTHENTICATION_IDENTITY_CLEARED: {
       return null;
     }
+    
+    default:
+      return state;
   }
 
-  return state;
+  
 };
 
 const decoded = (state = null, action) => {
@@ -44,9 +47,11 @@ const decoded = (state = null, action) => {
     case types.AUTHENTICATION_IDENTITY_CLEARED: {
       return null;
     }
+    default:
+      return state;
   }
 
-  return state;
+  
 };
 
 const isAuthenticating = (state = false, action) => {
@@ -60,9 +65,11 @@ const isAuthenticating = (state = false, action) => {
     case types.AUTHENTICATION_FAILED: {
       return false;
     }
+    default:
+      return state;
   }
 
-  return state;
+  
 };
 
 const error = (state = null, action) => {
@@ -76,9 +83,11 @@ const error = (state = null, action) => {
     case types.AUTHENTICATION_FAILED: {
       return action.payload.error;
     }
+    default:
+      return state;
   }
 
-  return state;
+  
 };
 
 const isRefreshing = (state = false, action) => {
@@ -92,9 +101,11 @@ const isRefreshing = (state = false, action) => {
     case types.TOKEN_REFRESH_FAILED: {
       return false;
     }
+    default:
+      return state;
   }
 
-  return state;
+  
 };
 
 const refreshingError = (state = null, action) => {
@@ -108,9 +119,11 @@ const refreshingError = (state = null, action) => {
     case types.TOKEN_REFRESH_FAILED: {
       return action.payload.error;
     }
+    default:
+      return state;
   }
 
-  return state;
+  
 };
 
 const auth = combineReducers({
