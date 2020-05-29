@@ -6,6 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import LoginForm from '../LoginForm';
 import NavBar from '../navbar';
 import TokenRefresh from '../tokenrefresh';
+import Trackmanager from '../trackmanager';
 
 import { configureStore } from '../../store';
 
@@ -15,9 +16,10 @@ const App = () => (
     <Router>
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                <NavBar />
-                {/* <LoginForm />
-                <TokenRefresh reviewTime={3600000} /> */}
+                {/* <NavBar /> */}
+                <Trackmanager />
+                {/* <LoginForm /> */}
+            {/*<TokenRefresh reviewTime={3600000} /> */}
             </PersistGate>
         </Provider>
     </Router>

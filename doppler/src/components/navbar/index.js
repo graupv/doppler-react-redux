@@ -6,29 +6,34 @@ import './styles.css';
 const NavBar = ({
 
 }) => (
-    <div classname="NavBar">
+    <div className="NavBar">
         <Fragment>
-            <div classname="nav-div">
+            <div className="nav-div">
+                <Link to="/">
+                    Home
+                </Link>
+            </div>
+            <div className="nav-div">
                 <Link to="/tracks">
                     Tracks
                 </Link>
             </div>
-            <div classname="nav-div">
+            <div className="nav-div">
                 <Link to="/phrasebox">
                     Phrasebox
                 </Link>
             </div>
-            <div classname="nav-div">
+            <div className="nav-div">
                 <Link to="/chordbox">
                     Chordbox
                 </Link>
             </div>
-            <div classname="nav-div">
+            <div className="nav-div">
                 <Link to="/sharing">
                     Sharing
                 </Link>
             </div>
-            <div classname="nav-div">
+            <div className="nav-div">
             <Link to="/out" id="log">
                     Logout
                 </Link>
