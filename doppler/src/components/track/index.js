@@ -3,16 +3,25 @@ import React, { Fragment } from 'react';
 import './styles.css';
 
 const Track = ({
-    songName,
-    key,
+    trackName,
+    clave,
     version,
     lastModifyDate
 }) => (
-    <Fragment>
+    // <Fragment>
         <div className="track-container">
-            <div>   </div>
+            <div className='title-container'>
+                <p className="title">
+                    {trackName}
+                </p>
+            </div>
+            <div className="track-details">
+                <p className="track-detail">Key: {clave}</p>
+                <p className="track-detail">Version: {version}</p>
+                <p className="track-detail">Last Change: {lastModifyDate}</p>
+            </div>
         </div>
-    </Fragment>
+    // </Fragment>
 
 );
 

@@ -45,10 +45,11 @@ const track = (state = {}, action) => {
 
 export default track;
 
+export const getTracks = state => state;
 export const getTrack = (state, id) => state[id];
 export const getLetra = state => state.letra;
 export const getTrackId = state => state.Trackid;
-export const getTrackName = state => state.name;
+export const getTrackName = state => state.trackname;
 export const getTrackKey = state => state.Key;
 export const getTrackpPrivate = state => state.private;
 export const getTrackDateModified = state => state.date_modified;

@@ -3,25 +3,26 @@ import * as types from '../types/track';
 
 
 export const createTrack = (
-    name,
+    trackname,
     owner, 
     date_modified = null,
     version = 1, 
     files =' ', 
-    private = true
+    privacy = true
+    
     
     ) => ({
     type: types.TRACK_CREATED,
     payload: {
         id: v4(),
-        name,
+        trackname,
         letra: '',
-        chart,
+        chart: '',
         key: '',
         owner,
-        date_modified = Date.now(),
+        date_modified,
         version,
-        private,
+        privacy,
         files
 
     }

@@ -7,6 +7,8 @@ import LoginForm from '../LoginForm';
 import NavBar from '../navbar';
 import TokenRefresh from '../tokenrefresh';
 import Trackmanager from '../trackmanager';
+import Track from '../track';
+import Addsong from '../addsong';
 
 import { configureStore } from '../../store';
 
@@ -17,6 +19,8 @@ const App = () => (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
                 {/* <NavBar /> */}
+                <Addsong />
+                {/* <Track /> */}
                 <Trackmanager />
                 {/* <LoginForm /> */}
             {/*<TokenRefresh reviewTime={3600000} /> */}
