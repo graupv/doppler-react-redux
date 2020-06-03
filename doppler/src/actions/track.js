@@ -2,25 +2,26 @@ import { v4  } from 'uuid';
 import * as types from '../types/track';
 
 
-export const createTrack = (
-    trackname,
+export const createTrack = ({
+    trackName,
+    trackKey,
     owner, 
     date_modified = null,
     version = 1, 
-    files =' ', 
+    files ='', 
     privacy = true
     
     
-    ) => ({
+}) => ({
     type: types.TRACK_CREATED,
     payload: {
         id: v4(),
-        trackname,
+        trackName,
+        trackKey,
         letra: '',
         chart: '',
-        key: '',
         owner,
-        date_modified,
+        date_modified: Date.now(),
         version,
         privacy,
         files

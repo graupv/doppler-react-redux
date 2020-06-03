@@ -19,6 +19,12 @@
     /* margin: 1rem 1rem; */
 }
 
+.nav-div:last-child {
+        margin-top: auto;
+    
+    
+}
+
 div.nav-div:hover {
     background-color: rgba(146, 49, 37, 0.897);    
     transition-duration: 400ms;
@@ -26,7 +32,7 @@ div.nav-div:hover {
 
 a {
     color: rgb(230, 199, 159);
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 500;
     padding: 0rem;
     height: 6rem;

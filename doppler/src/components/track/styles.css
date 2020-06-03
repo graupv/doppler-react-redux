@@ -1,4 +1,9 @@
+.header {
+     
+}
+
 .title-container {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +14,7 @@
 
 .title {
     color: peachpuff;
-    font-weight: 700;
+    font-weight: 650;
     font-size: large;
     width: 100%;
     text-align: center;
