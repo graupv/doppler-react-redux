@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions/phrasebox';
 import * as selectors from '../../reducers';
 
+import Phrase from '../phrase';
+
 import './styles.css';
 
 const phrases = ['un poco de sol', 'no cae mal'];
@@ -24,10 +26,34 @@ const Phrasebox = ({
         <Fragment>
             <div className="container">
                 <div className="phrase-container">
-
+                    {
+                        phrases.map(
+                            phr => (
+                                <Phrase
+                                text={phr}
+                                cls='phrase'
+                                />
+                            )
+                        )
+                    }
+                    {
+                        words.map(
+                            wrd => (
+                                <Phrase 
+                                text={wrd}
+                                cls='word'
+                                />
+                            )
+                        )
+                    }
                 </div>
                 <div className="button-container">
-
+                    <input
+                        type="text"
+                        placeholder="A word or two"
+                        value={phrase}
+                        onChange={e => changePhrase(e.target.value)}
+                    />
                 </div>
             </div>
         </Fragment>

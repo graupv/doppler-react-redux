@@ -5,5 +5,13 @@
 }
 
 .phrase-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     color: whitesmoke;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
 }
