@@ -1,0 +1,36 @@
+.home-container {
+    display: grid;
+    
+    
+    height: 60rem;
+    width: 60rem;
+}
+
+.mysongs-title {
+    height: 2rem;
+    width: 100%;
+    background-color: silver;
+    color: black;
+}
+
+.mysongs {
+    /* position: absolute; */
+    display: grid;
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* left: 12rem; */
+    background-color: rgb(146, 94, 146);
+    width: 30rem;
+    max-width: 350px;
+    height: 35rem;
+    margin: auto;
+}
+
+.quotes {
+    /* position: absolute; */
+    background-color: #fff;
+    width: 20rem;
+    /* left: 35rem; */
+    height: 15rem;
+    margin: auto;
+}

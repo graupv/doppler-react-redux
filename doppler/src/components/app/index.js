@@ -10,6 +10,7 @@ import Trackmanager from '../trackmanager';
 import Track from '../track';
 import Addsong from '../addsong';
 import Phrasebox from '../phrasebox';
+import Home from '../Home';
 
 import { configureStore } from '../../store';
 
@@ -20,8 +21,9 @@ const App = () => (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
                 {/* <NavBar /> */}
+                <Home />
                 {/* <Addsong /> */}
-                <Phrasebox />
+                {/* <Phrasebox /> */}
                 {/* <Track /> */}
                 {/* <Trackmanager /> */}
                 {/* <LoginForm /> */}

@@ -1,5 +1,22 @@
-.header {
-     
+
+.track-container {
+    align-items: center;
+    margin: auto;
+    /* opacity: 0.1; */
+    margin-bottom: 0.5rem;
+    background-color: teal;
+    border-radius: 0.5rem;
+    border: 0.25rem thistle solid ;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.track-container:hover {
+    background-color: rgb(92, 170, 170);
+    transition-duration: 300ms;
 }
 
 .title-container {
@@ -36,23 +53,4 @@
 
 .track-detail {
     color: peachpuff;
-}
-
-.track-container {
-    align-items: center;
-    margin: auto;
-    margin-bottom: 0.5rem;
-    background-color: teal;
-    border-radius: 0.5rem;
-    border: 0.25rem thistle solid ;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-.track-container:hover {
-    background-color: rgb(92, 170, 170);
-    transition-duration: 300ms;
 }

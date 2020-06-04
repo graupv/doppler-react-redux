@@ -3,13 +3,15 @@ import React, { Fragment } from 'react';
 import './styles.css';
 
 const Track = ({
+    id,
     trackName,
     clave,
     version,
-    lastModifyDate
+    lastModifyDate,
+    onClick
 }) => (
     // <Fragment>
-        <div className="track-container">
+        <div className="track-container" onClick={onClick}>
             <div className='title-container'>
                 <p className="title">
                     {trackName}

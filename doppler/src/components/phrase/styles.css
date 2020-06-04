@@ -1,9 +1,26 @@
+
 .phrase{
     background-color: rgb(17, 104, 63);
+    border-radius: 0.5rem;
+    border: blanchedalmond solid;
     color: white;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.phrase:hover {
+    background-color: rgb(65, 129, 99);
 }
 
 .word{
     background-color: rgb(211, 106, 36);
+    border-radius: 0.5rem;
+    border: papayawhip solid;
     color: black;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.word:hover {
+    background-color: rgb(224, 201, 67);
 }

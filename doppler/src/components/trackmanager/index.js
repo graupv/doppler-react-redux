@@ -37,7 +37,7 @@ const test_tracks = [
 
 const Trackmanager = () => (
     <Fragment>
-        <div className="container">
+        <div className="track-container">
             {
                 test_tracks.map(track => (
                     <Track

@@ -1,9 +1,9 @@
 import React, { Fragment,useState } from 'react';
 import { connect } from 'react-redux';
 
-import * as actions from '../../actions/track';
 import './styles.css';
-import { v4 as uuidv4} from 'uuid';
+import * as actions from '../../actions/track';
+// import { v4 as uuidv4} from 'uuid';
 
 const trackKeyList = [' ', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 
     'E', 'F', 'F#', 'G', 'G#',
@@ -22,7 +22,7 @@ const CreateTrack = ({
 
         <Fragment>
             <div className="createtrack-container">
-                <p>Track Name
+                <p>{'Track Name'}
                     <input
                         type="text"
                         placeholder="A Very Cool Track Name"
@@ -33,7 +33,7 @@ const CreateTrack = ({
                 <div>
                     <span>
 
-                        <p>Track Key
+                        <p>{'Track Key'}
 
                             <select name="keys" value={trackKey} onChange={e => changetrackKey(e.target.value)}>
                                 {
@@ -50,7 +50,11 @@ const CreateTrack = ({
                     </span>
                 </div>
                 <button className="createButt" type='submit' onClick={
-                    () => onsubmit(trackName, trackKey)
+                    () => {
+                        onsubmit(trackName, trackKey)
+                        changetrackName('')
+                        changetrackKey('')
+                    }
                 }>
                     Create
                 </button>
@@ -65,14 +69,11 @@ export default connect(
     dispatch => ({
         onsubmit(trackName, trackKey) {
             dispatch(actions.createTrack({
-                    // id: uuidv4(),
                     trackName,
                     trackKey,
                 })
                 )
-            // v++;
         }
     }),
-
 )(CreateTrack);
 

@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react';
 import './styles.css';
 
-const Phrase = ({text, cls}) => (
+const Phrase = ({
+    text, 
+    cls, 
+    onClick
+}) => (
     <div className={cls}>
-        text
+        {text}
     </div>
 );
 

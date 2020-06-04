@@ -1,17 +1,65 @@
-.container {
+.phrasebox-container {
+    border-radius: 2rem;
+    border: thistle solid;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 40rem;
+    padding-bottom: 2rem;
+    padding: 1rem;
+    position: relative;
+}
 
+.box {
+    background-color: teal;
+    border-radius: 1rem;
+    border: black solid 0.25rem;
+    display: flex;
+    height: 30rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 1em;
+    padding: 0.25rem;
+    width: 100%;
 }
 
 .phrase-container {
+    
+    align-content: flex-start;
+    background: rgb(56, 114, 87);
+    border-radius: 2rem;
+    border: black solid;
+    color: whitesmoke;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    color: whitesmoke;
+    height: 90%;
+    margin: 1rem;
+    margin-bottom: 4rem;
+    padding: 0.5rem;
+    
+    width: 95%;
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 10rem;
+    margin: auto;
+    width: 20rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
 }

@@ -1,12 +1,12 @@
 import without from 'lodash/without'
 import * as types from '../types/phrasebox';
 
-const phrasebox = (state = {phrases:[], words:[]}, action) => {
+const phrasebox = (state = { phrases:[], words:[] }, action) => {
 
     switch(action.type) {
         // case 'PHRASE_ADDED': {
         //     return [...state, action.payload];
-        // }
+        // }s
         case types.PHRASE_ADDED: {
             return {
                 ...state,

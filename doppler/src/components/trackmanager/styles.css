@@ -3,14 +3,19 @@ div {
 }
 
 
-.container {
+.track-container {
+    /* position: absolute; */
+    /* left: 10rem; */
     margin: auto;
-    width: 40rem;
-    height: 100%;
+    width: 20rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
+    /* overflow: auto; */
 }
 
 .card {
