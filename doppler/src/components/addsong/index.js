@@ -22,7 +22,7 @@ const CreateTrack = ({
 
         <Fragment>
             <div className="createtrack-container">
-                <p>
+                <p>Track Name
                     <input
                         type="text"
                         placeholder="A Very Cool Track Name"
@@ -30,23 +30,25 @@ const CreateTrack = ({
                         onChange={e => changetrackName(e.target.value)}
                     />
                 </p>
-                <span>Track Key
+                <div>
+                    <span>
 
-                    <p>
+                        <p>Track Key
 
-                        <select name="keys" value={trackKey} onChange={e => changetrackKey(e.target.value)}>
-                            {
-                                trackKeyList.map(
-                                    k => (
-                                    <option value={k}>{k}</option >
+                            <select name="keys" value={trackKey} onChange={e => changetrackKey(e.target.value)}>
+                                {
+                                    trackKeyList.map(
+                                        k => (
+                                        <option value={k}>{k}</option >
+                                        )
                                     )
-                                )
-                            }
-                            
-                            
-                        </select>
-                    </p>
-                </span>
+                                }
+                                
+                                
+                            </select>
+                        </p>
+                    </span>
+                </div>
                 <button className="createButt" type='submit' onClick={
                     () => onsubmit(trackName, trackKey)
                 }>

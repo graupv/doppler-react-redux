@@ -4,9 +4,9 @@ import * as types from '../types/track';
 /*
  songId: id,
         lyrics: 'String',
-        name: 'Name',
+        trackName: 'Name',
+        trackKey: 'A',
         chart: '',
-        key: 'A',
         additional_files: [{}] ?, // paths i suppose
         version: #,
         private: bool,
@@ -47,9 +47,9 @@ export default track;
 
 export const getTracks = state => state;
 export const getTrack = (state, id) => state[id];
-export const getLetra = state => state.letra;
-export const getTrackId = state => state.Trackid;
-export const getTrackName = state => state.trackname;
-export const getTrackKey = state => state.Key;
-export const getTrackpPrivate = state => state.private;
-export const getTrackDateModified = state => state.date_modified;
+export const getLetra = (state, id) => state[id].letra;
+export const getTrackIds = state => Object.keys(state);
+export const getTrackName = (state, id) => state[id].trackName;
+export const getTrackKey = (state, id) => state[id].trackKey;
+export const getTrackPrivate = (state, id) => state[id].private;
+export const getTrackDateModified = (state, id) => state[id].date_modified;

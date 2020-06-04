@@ -9,6 +9,7 @@ import TokenRefresh from '../tokenrefresh';
 import Trackmanager from '../trackmanager';
 import Track from '../track';
 import Addsong from '../addsong';
+import Phrasebox from '../phrasebox';
 
 import { configureStore } from '../../store';
 
@@ -19,7 +20,8 @@ const App = () => (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
                 {/* <NavBar /> */}
-                <Addsong />
+                {/* <Addsong /> */}
+                <Phrasebox />
                 {/* <Track /> */}
                 {/* <Trackmanager /> */}
                 {/* <LoginForm /> */}
