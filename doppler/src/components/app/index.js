@@ -21,13 +21,13 @@ const App = () => (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
                 {/* <NavBar /> */}
-                <Home />
+                {/* <Home /> */}
                 {/* <Addsong /> */}
                 {/* <Phrasebox /> */}
                 {/* <Track /> */}
                 {/* <Trackmanager /> */}
-                {/* <LoginForm /> */}
-            {/*<TokenRefresh reviewTime={3600000} /> */}
+                <LoginForm />
+            <TokenRefresh reviewTime={3600000} />
             </PersistGate>
         </Provider>
     </Router>

@@ -19,6 +19,7 @@
     /* flex-direction: column; */
     /* justify-content: flex-start; */
     /* left: 12rem; */
+    overflow: hidden scroll;
     background-color: rgb(146, 94, 146);
     width: 30rem;
     max-width: 350px;
