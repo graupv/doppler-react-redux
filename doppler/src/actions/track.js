@@ -5,13 +5,11 @@ import * as types from '../types/track';
 export const createTrack = ({
     trackName,
     trackKey,
-    owner, 
-    date_modified = null,
+    username, 
+    date_modified,
     version = 1, 
     files ='', 
     privacy = true
-    
-    
 }) => ({
     type: types.TRACK_CREATED,
     payload: {
@@ -20,14 +18,24 @@ export const createTrack = ({
         trackKey,
         letra: '',
         chart: '',
-        owner,
+        username,
         date_modified: Date.now(),
         version,
         privacy,
         files
-
     }
 });
+
+export const addTrack = (tracks, result) => ({
+    type: types.TRACK_ADDED,
+    no: console.log('From addTrack action creator:\n\n'),
+    nada: console.log(tracks),
+    zilch: console.log(result),
+    payload: { 
+        ...result
+        // attributes[id]: ...attributes,
+    }
+})
 
 export const deleteTrack = id => ({
     type: types.TRACK_DELETED,

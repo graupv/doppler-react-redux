@@ -21,6 +21,13 @@ const track = (state = {}, action) => {
             };
         }
 
+        case types.TRACK_ADDED: {
+            return {
+                ...state,
+                [action.payload.id]: action.payload
+            };
+        }
+
         case types.TRACK_CHANGED: {
             // todo action.type para cambios espcificos
             // para catalogar cambios entre versiones

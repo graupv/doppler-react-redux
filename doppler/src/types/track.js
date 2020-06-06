@@ -1,3 +1,4 @@
+export const TRACK_ADDED = 'TRACK_ADDED';
 export const TRACK_CREATED = 'TRACK_CREATED';
 export const TRACK_CHANGED = 'TRACK_CHANGED';
 export const TRACK_DELETED = 'TRACK_DELETED';
