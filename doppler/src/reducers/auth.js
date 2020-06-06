@@ -126,6 +126,12 @@ const refreshingError = (state = null, action) => {
   
 };
 
+const signUp = (state = null, action) => {
+  switch(action.type) {
+    // 
+  }
+}
+
 const auth = combineReducers({
   token,
   decoded,
