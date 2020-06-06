@@ -6,7 +6,7 @@ import { call, takeEvery, put,
     delay, select,  } from 'redux-saga/effects';
 import { normalize } from 'normalizr';
 
-import * as schemas from '../schemas/tracks';
+import * as schemas from '../schemas/track';
 import * as selectors from '../reducers';
 import * as actions from '../actions/track';
 import * as types from '../types/track';
@@ -34,7 +34,7 @@ function* fetchTracks(action) {
                 const jsonResult = yield response.json();
                 const { 
                     entities: { tracks },
-                result, } = normalize(jsonResult, schemas.track);
+                result, } = normalize(jsonResult, schemas.tracks);
                 console.log('Tracks:\n', tracks);
                 console.log('Result:\n', result);
                 yield put(

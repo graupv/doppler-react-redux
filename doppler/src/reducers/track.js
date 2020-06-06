@@ -12,7 +12,7 @@ import * as types from '../types/track';
         private: bool,
 */
 
-const track = (state = {}, action) => {
+const track = (state = [], action) => {
     switch (action.type) {
         case types.TRACK_CREATED: {
             return {

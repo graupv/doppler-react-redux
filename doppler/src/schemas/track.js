@@ -1,7 +1,7 @@
 import { schema } from 'normalizr';
 
 
-export const tracks = new schema.Entity(
+export const track = new schema.Entity(
   'tracks',
 );
-export const tracks = new schema.Array(tracks);
+export const tracks = new schema.Array(track);

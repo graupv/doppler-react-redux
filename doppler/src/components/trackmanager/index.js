@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import Track from '../track';
+import { connect } from 'react-redux';
+import * as selectors from '../../reducers';
 
 import './styles.css';
 
@@ -35,22 +37,32 @@ const test_tracks = [
     },
 ];
 
-const Trackmanager = () => (
+const Trackmanager = ({
+    songs = [],
+    onClick
+}) => (
     <Fragment>
         <div className="track-container">
             {
-                test_tracks.map(track => (
-                    <Track
-                        trackName={track.trackName}
-                        clave={track.clave}
-                        version={track.version}
-                        lastModifyDate={track.lastModifyDate}
-                    />
-                ) )
+                songs.map(
+                    track => (
+                        <Track
+                            trackName={track.trackName}
+                            clave={track.clave}
+                            version={track.version}
+                            lastModifyDate={track.lastModifyDate}
+                            onClick={onClick}
+                        />
+                    ) 
+                )
             }
         </div>
     </Fragment>
 
 );
 
-export default Trackmanager;
+export default connect(
+    state => ({
+        tracks: selectors.getTracks(state),
+    }),
+)(Trackmanager);

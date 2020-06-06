@@ -10,8 +10,9 @@ div {
     width: 20rem;
     height: 15rem;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* fl */
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;

@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
+import * as selectors from '../../reducers';
 
 import './styles.css';
 
@@ -27,4 +29,6 @@ const Track = ({
 
 );
 
-export default Track;
+export default connect(
+    
+)(Track);
