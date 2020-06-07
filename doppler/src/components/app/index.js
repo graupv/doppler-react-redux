@@ -25,7 +25,7 @@ const App = () => (
             <PersistGate loading={null} persistor={persistor}>
                 <NavBar />
                 <Switch>
-                    <Route path='/' exact component={Trackmanager} />
+                    <Route path='/' exact component={Home} />
                     <Route path='/tracks' exact component={Track} />
                     <Route path='/phrasebox' exact component={Phrasebox} />
                 </Switch>
