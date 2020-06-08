@@ -11,7 +11,7 @@ const trackKeyList = [' ', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#',
 
 const CreateTrack = ({
     onsubmit,
-    
+    key,
        
 
 }) => {
@@ -69,8 +69,8 @@ export default connect(
     dispatch => ({
         onsubmit(trackName, trackKey) {
             dispatch(actions.createTrack({
-                    trackName,
-                    trackKey,
+                    name: trackName,
+                    key: trackKey,
                 })
                 )
         }

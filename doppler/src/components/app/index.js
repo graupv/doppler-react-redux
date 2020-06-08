@@ -28,6 +28,7 @@ const App = () => (
                     <Route path='/' exact component={Home} />
                     <Route path='/tracks' exact component={Track} />
                     <Route path='/phrasebox' exact component={Phrasebox} />
+                    <Route path='/login' exact component={LoginForm} />
                 </Switch>
                 {/* <Home /> */}
                 {/* <Addsong /> */}

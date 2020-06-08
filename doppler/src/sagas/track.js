@@ -1,4 +1,4 @@
-import { API_BASE_URL } from '../settings';
+// import { API_BASE_URL } from '../settings';
 
 import jwtDecode from 'jwt-decode';
 import { call, takeEvery, put,
@@ -11,6 +11,7 @@ import * as selectors from '../reducers';
 import * as actions from '../actions/track';
 import * as types from '../types/track';
 // import { useState } from 'react';
+const API_BASE_URL = 'http://localhost:8000/api/v1';
 
 function* fetchTracks(action) {
     try {
@@ -62,10 +63,16 @@ function* createTrack(action) {
         const isAuth = yield select(selectors.isAuthenticated);
 
         if (isAuth) {
+            console.log('Creating track saga started');
+            console.log('Payload:\n');
+            console.log(`${API_BASE_URL}/tracks/`)
+            
             const token = yield select(selectors.getAuthToken);
             const decoded = jwtDecode(token);
             const { username } = decoded;
             action.payload['username'] = username
+            console.log(action.payload);
+            console.log(JSON.stringify(action.payload));
             const response = yield call (
                 fetch,
                 `${API_BASE_URL}/tracks/`,
@@ -89,7 +96,9 @@ function* createTrack(action) {
                 //         username
                 //     ),
                 //     );
-                  }
+                } else {
+                    console.log('Server replied:', response.status);
+                }
         }
     } catch (error) {
         console.log('createTrack Saga error:\n', error);
