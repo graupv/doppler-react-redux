@@ -6,7 +6,7 @@ import './styles.css';
 
 const Track = ({
     id,
-    key,
+    // key,
     trackName,
     clave,
     version,
@@ -14,7 +14,7 @@ const Track = ({
     onClick
 }) => (
     // <Fragment>
-        <div className="track-container" onClick={onClick} key={key}>
+        <div className="track-container" onClick={onClick}>
             <div className='title-container'>
                 <p className="title">
                     {trackName}

@@ -28,9 +28,10 @@ const Phrasebox = ({
                 <div className="box">
                     <div className="phrase-container">
                         {
-                            test_phrases.map(
-                                phr => (
+                            phrases.map(
+                                (phr, index) => (
                                     <Phrase
+                                    key={index}
                                     text={phr}
                                     cls='phrase'
                                     />
@@ -38,9 +39,10 @@ const Phrasebox = ({
                             )
                         }
                         {
-                            test_words.map(
-                                wrd => (
-                                    <Phrase 
+                            words.map(
+                                (wrd, index) => (
+                                    <Phrase
+                                    key={index} 
                                     text={wrd}
                                     cls='word'
                                     />
@@ -79,10 +81,8 @@ const Phrasebox = ({
 )};
 
 export default connect(
-    (state, ownProps ) => ({
+    state => ({
             phrases: selectors.getPhrases(state),
-            nada: console.log('here:' + selectors.getPhrases(state)),
-            nadas: console.log(ownProps),
             words: selectors.getWords(state),
     }),
     dispatch => ({

@@ -10,9 +10,7 @@ const trackKeyList = [' ', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#',
 ];
 
 const CreateTrack = ({
-    onsubmit,
-    key,
-       
+    onsubmit,    
 
 }) => {
     const [trackName, changetrackName] = useState('');
@@ -20,7 +18,7 @@ const CreateTrack = ({
 
     return (
 
-        <Fragment>
+        
             <div className="createtrack-container">
                 <p>{'Track Name'}
                     <input
@@ -38,8 +36,8 @@ const CreateTrack = ({
                             <select name="keys" value={trackKey} onChange={e => changetrackKey(e.target.value)}>
                                 {
                                     trackKeyList.map(
-                                        k => (
-                                        <option value={k}>{k}</option >
+                                        (k, i) => (
+                                        <option value={k} key={i}>{k}</option >
                                         )
                                     )
                                 }
@@ -60,7 +58,7 @@ const CreateTrack = ({
                 </button>
             </div>  
             {/* end of div container */}
-        </Fragment>
+        
     )
 };
 

@@ -28,9 +28,6 @@ export const createTrack = ({
 
 export const addTrack = (tracks, result) => ({
     type: types.TRACK_ADDED,
-    no: console.log('From addTrack action creator:\n\n'),
-    nada: console.log(tracks),
-    zilch: console.log(result),
     payload: { 
         ...result
         // attributes[id]: ...attributes,

@@ -45,8 +45,9 @@ const Trackmanager = ({
         <div className="track-container">
             {
                 songs.map(
-                    track => (
+                    (track, index) => (
                         <Track
+                            key={index}
                             trackName={track.trackName}
                             clave={track.clave}
                             version={track.version}
