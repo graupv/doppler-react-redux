@@ -30,6 +30,4 @@ const Track = ({
 
 );
 
-export default connect(
-    
-)(Track);
+export default Track;

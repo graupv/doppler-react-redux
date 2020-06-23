@@ -48,6 +48,40 @@ import {
       login,
     );
   }
+
+  function* signup(action) {
+    try {
+      const response = yield call(
+        fetch,
+        `${API_BASE_URL}/account/create/`,
+        {
+          method: 'POST',
+          body: JSON.stringify(action.payload),
+          headers:{
+            // 'Content-Type': 'application/json',
+          },
+        },
+      );
+  
+      if (response.status === 201) {
+        const { token } = yield response.json();
+        // should also call sign in ?
+        // yield put(actions.completeLogin(token));
+      } else {
+        const { non_field_errors } = yield response.json();
+        yield put(actions.failLogin(non_field_errors[0]));
+      }
+    } catch (error) {
+      yield put(actions.failLogin('Falló horrible la conexión mano'));
+    }
+  }
+  
+  export function* watchSignupStarted() {
+    yield takeEvery(
+      // types.AUTHENTICATION_STARTED,
+      signup,
+    );
+  }
   
   function* refreshToken(action) {
     const expiration = yield select(selectors.getAuthExpiration);
