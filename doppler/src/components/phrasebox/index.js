@@ -38,7 +38,7 @@ const Phrasebox = ({
                                 )
                             )
                         }
-                        {
+                        {/* {
                             words.map(
                                 (wrd, index) => (
                                     <Phrase
@@ -48,7 +48,7 @@ const Phrasebox = ({
                                     />
                                 )
                             )
-                        }
+                        } */}
                     </div>
                 </div>
                 <div className="bottom-container">
@@ -66,14 +66,14 @@ const Phrasebox = ({
                             }>
                                 Add Phrase
                         </button>
-                        <button onClick={
+                        {/* <button onClick={
                             () => { 
                                 onClickWord(phrase);
                                 changePhrase('');
                             }
                             }>
                                 Add Word
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>
@@ -83,17 +83,17 @@ const Phrasebox = ({
 export default connect(
     state => ({
             phrases: selectors.getPhrases(state),
-            words: selectors.getWords(state),
+            // words: selectors.getWords(state),
     }),
     dispatch => ({
         onClickPhrase(phrase) {
             dispatch(actions.addPhrase(phrase))
             test_phrases.push(phrase)
         },
-        onClickWord(phrase) {
-            dispatch(actions.addWord(phrase))
-            test_words.push(phrase)
-        },
+        // onClickWord(phrase) {
+        //     dispatch(actions.addWord(phrase))
+        //     test_words.push(phrase)
+        // },
     }),
 
 )(Phrasebox);

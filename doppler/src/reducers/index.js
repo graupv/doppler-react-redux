@@ -14,7 +14,7 @@ const reducer = combineReducers({
 export default reducer;
 
 export const getPhrases = state => phraseboxSelectors.getPhrases(state.phrasebox);
-export const getWords = state => phraseboxSelectors.getWords(state.phrasebox);
+// export const getWords = state => phraseboxSelectors.getWords(state.phrasebox);
 export const getPhrasebox = state => phraseboxSelectors.getPhrasebox(state.phrasebox);
 
 export const getTracks = state => trackSelectors.getTracks(state.track);

@@ -10,12 +10,12 @@ export const removePhrase = (phrase) => ({
     payload: {type: 'phrases', phrase} 
  });
 
-export const addWord = (word) => ({
-    type: types.WORD_ADDED,
-    payload: {type: 'words', word} 
- });
+// export const addWord = (word) => ({
+//     type: types.WORD_ADDED,
+//     payload: {type: 'words', word} 
+//  });
 
-export const removeWord = (word) => ({
-    type: types.WORD_REMOVED,
-    payload: {type: 'words', word} 
- });
+// export const removeWord = (word) => ({
+//     type: types.WORD_REMOVED,
+//     payload: {type: 'words', word} 
+//  });
